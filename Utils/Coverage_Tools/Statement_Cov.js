@@ -179,8 +179,16 @@ function Statement_Cov() {
         Test_Cases.forEach((test) => {
             const coverageString = JSON.stringify(test.coverage);
             if (!Mapped_Coverages.has(coverageString)) {
-                Mapped_Coverages.add(coverageString);
-                Temp_Test_Cases.push(test);
+                let flag = false;
+                for(const key in test.coverage){
+                    if(test.coverage[key]>=1){
+                        flag=true;
+                    }
+                }
+                if(flag===true){
+                    Mapped_Coverages.add(coverageString);
+                    Temp_Test_Cases.push(test);
+                }
             }
         });
         const Coverage_Mapping = {};
