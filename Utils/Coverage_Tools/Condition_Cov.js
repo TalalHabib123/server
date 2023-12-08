@@ -464,7 +464,7 @@ function Condition_Cov() {
                 }
             }
             const Functions_Called = Function_Order.filter((call) => call !== func);
-            for (let index = 0; index < 1000; index++) {
+            for (let index = 0; index < 5000; index++) {
                 ExecuteTestCases(generateRandomArray(Prediction_Values, Parameter), func, Functions_Called, If_Spaces);
             }
             Select_Best_Test_Case(Function_Order, func, If_Spaces);

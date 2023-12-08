@@ -7,7 +7,6 @@ function fun(check) {
 }
 
 function printTips(check, check2) {
-  let tips = ["Click on any AST node with a '+' to expand it", "Hovering over a node highlights the corresponding location in the source code", "Shift click on an AST node to expand the whole subtree"];
   if (check == "KILL" || check == "ME" || check === "Hello World") {
     if (check === "Hello World") {
       console.log("Hello World");
@@ -28,6 +27,11 @@ function printTips(check, check2) {
 }
 
 function printTips2(check, check2) {
+  let tips = ["Click on any AST node with a '+' to expand it", "Hovering over a node highlights the corresponding location in the source code", "Shift click on an AST node to expand the whole subtree"];
+  do {
+    console.log(tips[i]);
+    i++;
+  } while (i < tips.length);
   console.log("Hello World");
   console.log("Bye");
 }
