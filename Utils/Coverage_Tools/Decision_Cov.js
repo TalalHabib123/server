@@ -203,9 +203,8 @@ function Decision_Cov() {
             if (!Mapped_Coverages.has(coverageString)) {
                 let flag = false;
                 for (const key in test.coverage) {
-                    if (test.coverage[key][0] === 1 || test.coverage[key][1] === 1) {
+                    if (test.coverage[key][0] >= 1 || test.coverage[key][1] >= 1) {
                         flag = true;
-                        break;
                     }
                 }
                 if (flag === true) {

@@ -197,7 +197,7 @@ function Condition_Cov() {
                 let flag = false;
                 for (const key in test.coverage) {
                     test.coverage[key].forEach((value, index) => {
-                        if (value === 1) {
+                        if (value >= 1) {
                             flag = true;
                         }
                     });
